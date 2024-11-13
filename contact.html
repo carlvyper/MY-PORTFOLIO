@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Nimlord Mwiti</title>
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url('picture10.jpg'); /* Path to your nature image */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    padding: 20px;
+    position: relative;
+}
+
+/* Overlay Styling */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: -1; /* Keep the overlay behind the content */
+}
+
+        /* Header Styling */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2em;
+            animation: blinkColor 1s step-start infinite;
+        }
+
+        /* Blinking Header Colors Animation */
+        @keyframes blinkColor {
+            0% {
+                color: #fff;
+            }
+            50% {
+                color: #ff6347;
+            }
+            100% {
+                color: #fff;
+            }
+        }
+
+        /* Navigation Menu Styling */
+        nav {
+    margin: 1em 0;
+    text-align: center;
+}
+
+/* Navigation Link Styling */
+nav a {
+    text-decoration: none;
+    color: #fff; /* Make the text color white for better visibility */
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for visibility */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+nav a:hover {
+    background-color: #1629da; /* Change to a strong color on hover */
+    color: #fff; /* Ensure text color remains white on hover */
+}
+.module {
+  background: 
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.6)
+    ),
+}
+
+
+        /* Main Content Styling */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-image: url('picture119.jpg'); /* Path to your nature image */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #f0e9e9;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        .contact-details {
+            margin-bottom: 2em;
+        }
+
+        .contact-details p {
+            font-size: 1.1em;
+            color: #f0e9e9;
+        }
+
+        .contact-details a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-details a:hover {
+            color: #0056b3;
+        }
+
+        /* Form Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        label {
+            font-weight: bold;
+            color:white;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            width: 100px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .whatsapp-link {
+            margin-top: 1em;
+            display: inline-block;
+            text-decoration: none;
+            color: #25D366;
+            font-weight: bold;
+        }
+
+        /* Footer Styling */
+        footer {
+            margin-top: 2em;
+            padding: 2em;
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        footer:hover {
+            transform: scale(1.05);
+            background-color: #444;
+        }
+
+        footer p {
+            position: absolute;
+            white-space: nowrap;
+            animation: scroll-text 15s linear infinite;
+        }
+
+        @keyframes scroll-text {
+            0% {
+                left: 100%;
+            }
+            100% {
+                left: -100%;
+            }
+        }
+
+        /* Contact Buttons */
+        .contact-buttons {
+            margin-top: 1em;
+            display: flex;
+            gap: 1.5em;
+            justify-content: center;
+        }
+
+        .contact-buttons a {
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-buttons a:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="testimonial.html">Testimonial</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <main class="container">
+        <h2>Get in Touch</h2>
+
+        <div class="contact-details">
+            <p><strong>Phone:</strong> <a href="tel:0799802804">0799802804</a></p>
+            <p><strong>Email:</strong> <a href="mailto:nimlordmwiti878@gmail.com">nimlordmwiti878@gmail.com</a></p>
+        </div>
+
+        <div class="contact-buttons">
+            <a href="tel:0799802804">Call Me</a>
+            <a href="https://wa.me/254799802804" target="_blank">Message Me on WhatsApp</a>
+            <a href="mailto:nimlordmwiti878@gmail.com">Send Email</a>
+        </div>
+
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" class="btn">Send</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NimlordMwiti Company</p>
+    </footer>
+</body>
+</html>

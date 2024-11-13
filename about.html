@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Nimlord Mwiti</title>
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+    font-family: Arial, sans-serif;
+    line-height: 1.0;
+    background-image: url('picture10.jpg'); /* Path to your nature image */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    padding: 20px;
+    position: relative;
+}
+
+/* Overlay Styling */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: -1; /* Keep the overlay behind the content */
+}
+
+        /* Header Styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em; /* Fixed padding */
+    text-align: center;
+    position: relative;
+}
+
+/* Animation for Left to Right Movement of the Text */
+header h1 {
+    font-size: 2em;
+    position: relative;
+    display: inline-block;
+    animation: moveText 4s ease-in-out infinite, blinkColor 1s step-start infinite;
+}
+
+/* Animation for Left to Right Transformation of the Text */
+@keyframes moveText {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+    }
+    25% {
+        transform: translateX(0); /* Move to the original position */
+    }
+    50% {
+        transform: translateX(100%); /* Move off-screen to the right */
+    }
+    75% {
+        transform: translateX(0); /* Move back to the original position */
+    }
+    100% {
+        transform: translateX(-100%); /* Start off-screen to the left again */
+    }
+}
+
+/* Blinking Header Colors Animation */
+@keyframes blinkColor {
+    0% {
+        color: #fff;
+    }
+    50% {
+        color: #ff6347; /* Tomato */
+    }
+    100% {
+        color: #fff;
+    }
+}
+
+
+        /* Navigation Menu Styling */
+        nav {
+    margin: 1em 0;
+    text-align: center;
+}
+
+/* Navigation Link Styling */
+nav a {
+    text-decoration: none;
+    color: #fff; /* Make the text color white for better visibility */
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for visibility */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+nav a:hover {
+    background-color: #1629da; /* Change to a strong color on hover */
+    color: #fff; /* Ensure text color remains white on hover */
+}
+
+
+        /* Main Content Styling */
+        .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 27px;
+    background-image: url('picture22.jpeg'); /* Path to your nature image */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: 300;
+    color: #fff; /* Change text color to white for better contrast */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Overlay for .container to improve text visibility */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    border-radius: 8px; /* Matches container border radius */
+    z-index: 1;
+}
+
+/* Ensure text appears above the overlay */
+.container * {
+    position: relative;
+    z-index: 2;
+}
+
+
+        h2 {
+            color: #11e2e2;
+            margin-bottom: 0.5em;
+        }
+
+        p{
+            margin-bottom: 1em;
+        }
+
+        /* Footer Styling */
+        footer {
+            margin-top: 2em;
+            padding: 2em;
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        footer p {
+            position:absolute;
+            white-space: nowrap;
+            animation: scroll-text 15s linear infinite;
+        }
+
+@keyframes scroll-text {
+            0% {
+                left: 100%;
+            }
+            100% {
+                left: -100%;
+            }
+        }
+        p{
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Me</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="testimonial.html">Testimonial</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <main class="container">
+        <h2>Who I Am</h2>
+        <p>Hi, I'm Nimlord, a dedicated web and graphic designer based in [Your Location]. I specialize in creating responsive, visually compelling, and user-friendly digital experiences that help brands tell their stories effectively. My goal is to make design that not only catches the eye but also resonates with the audience.</p>
+
+        <h2>My Background</h2>
+        <p>With over two years in the industry, I have developed a well-rounded skill set, from web design and user interface (UI) to graphic design and branding. My experience includes working with startups, small businesses, and individual clients, all of whom have unique goals and design requirements. Each project has allowed me to expand my knowledge, adapt to new challenges, and refine my techniques to produce work that exceeds client expectations.</p>
+
+        <h2>Design Philosophy</h2>
+        <p>I am a strong advocate for user-centered design, which places the needs and experiences of users at the core of the design process. This means that every design element is purposeful, intuitive, and contributes to an overall enjoyable experience for the end-user. I believe that great design is as much about solving problems as it is about creating beauty, and I am always eager to find creative solutions that align with both functional and aesthetic goals.</p>
+
+        <h2>Skills and Expertise</h2>
+        <p>My expertise includes a diverse range of design skills and tools:</p>
+        <ul>
+            <li><strong>Web Design & Development:</strong> Creating responsive, accessible websites optimized for performance and SEO.</li>
+            <li><strong>Graphic Design:</strong> Designing logos, branding materials, and visuals that strengthen a brand’s identity.</li>
+            <li><strong>UI/UX Design:</strong> Crafting user-friendly interfaces that provide a seamless experience across devices.</li>
+            <li><strong>Branding:</strong> Helping businesses define their unique visual identity through cohesive and memorable designs.</li>
+            <li><strong>Tools:</strong> Skilled in Adobe Creative Suite (Photoshop, Illustrator), Figma, and other industry-standard tools.</li>
+        </ul>
+
+        <h2>What I Bring to the Table</h2>
+        <p>Every project I undertake is approached with a commitment to quality, innovation, and client satisfaction. I am dedicated to clear and open communication, ensuring that every design choice aligns with the client’s vision. By combining creativity with technical skill, I aim to provide a collaborative experience that leaves clients feeling confident in their brand and excited about the finished product.</p>
+
+        <p>If you’re looking for a designer who values both form and function, and is dedicated to bringing your vision to life, let’s work together to create something amazing.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NimlordMwiti Company</p>
+    </footer>
+</body>
+</html>

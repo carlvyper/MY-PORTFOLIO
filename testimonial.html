@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - Nimlord Mwiti</title>
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url('picture10.jpg'); /* Path to your nature image */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    padding: 20px;
+    position: relative;
+}
+
+/* Overlay Styling */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: -1; /* Keep the overlay behind the content */
+}
+
+        /* Header Styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em; /* Fixed padding */
+    text-align: center;
+    position: relative;
+}
+
+/* Animation for Left to Right Movement of the Text */
+header h1 {
+    font-size: 2em;
+    position: relative;
+    display: inline-block;
+    animation: moveText 4s ease-in-out infinite, blinkColor 1s step-start infinite;
+}
+
+/* Animation for Left to Right Transformation of the Text */
+@keyframes moveText {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+    }
+    25% {
+        transform: translateX(0); /* Move to the original position */
+    }
+    50% {
+        transform: translateX(100%); /* Move off-screen to the right */
+    }
+    75% {
+        transform: translateX(0); /* Move back to the original position */
+    }
+    100% {
+        transform: translateX(-100%); /* Start off-screen to the left again */
+    }
+}
+
+/* Blinking Header Colors Animation */
+@keyframes blinkColor {
+    0% {
+        color: #fff;
+    }
+    50% {
+        color: #ff6347; /* Tomato */
+    }
+    100% {
+        color: #fff;
+    }
+}
+
+        /* Navigation Menu Styling */
+        nav {
+    margin: 1em 0;
+    text-align: center;
+}
+
+/* Navigation Link Styling */
+nav a {
+    text-decoration: none;
+    color: #fff; /* Make the text color white for better visibility */
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for visibility */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+nav a:hover {
+    background-color: #1629da; /* Change to a strong color on hover */
+    color: #fff; /* Ensure text color remains white on hover */
+}
+.module {
+  background: 
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.6)
+    ),
+}
+
+        /* Main Content Styling */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-image: url('picture26.webp');
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #110de2;
+            margin-bottom: 1em;
+            text-align: center;
+        }
+
+        /* Testimonials Grid */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .testimonial {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .testimonial h3 {
+            color: #333;
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+        }
+
+        .testimonial p {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 1em;
+        }
+
+        .learn-more-link {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .learn-more-link:hover {
+            color: #0056b3;
+        }
+
+        /* Hidden Content */
+        .more-info {
+            display: none;
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* Footer Styling */
+        footer {
+            margin-top: 2em;
+            padding: 2em;
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        footer p {
+            position: absolute;
+            white-space: nowrap;
+            animation: scroll-text 15s linear infinite;
+        }
+
+        @keyframes scroll-text {
+            0% {
+                left: 100%;
+            }
+            100% {
+                left: -100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Testimonials</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="testimonial.html">Testimonial</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <main class="container">
+        <h2>What Clients Say About Me</h2>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <h3>Precious Gakii</h3>
+                <p>"Working with Nimlord was a pleasure. His designs were creative, and he truly understood our brand."</p>
+                <a href="javascript:void(0)" class="learn-more-link" onclick="toggleMoreInfo(this)">Learn More</a>
+                <div class="more-info">
+                    <p>"Nimlord took the time to understand our goals and crafted a design that perfectly aligned with our vision. I couldn’t be happier with the result!"</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <h3>Julius Ntwiga Marangu</h3>
+                <p>"Nimlord’s attention to detail and professionalism exceeded my expectations. The final product was amazing."</p>
+                <a href="javascript:void(0)" class="learn-more-link" onclick="toggleMoreInfo(this)">Learn More</a>
+                <div class="more-info">
+                    <p>"His ability to take feedback and refine designs until they are perfect is a testament to his commitment to excellence."</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <h3>Simon Kimathi</h3>
+                <p>"I was impressed with the quick turnaround time and quality of Nimlord's work. Highly recommend!"</p>
+                <a href="javascript:void(0)" class="learn-more-link" onclick="toggleMoreInfo(this)">Learn More</a>
+                <div class="more-info">
+                    <p>"Not only did he meet the deadline, but the work exceeded my expectations in terms of design and functionality. Will definitely work with him again!"</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <h3>Benjamin Mwenda</h3>
+                <p>"The website and branding Nimlord created for us was exactly what we needed. He's a true professional."</p>
+                <a href="javascript:void(0)" class="learn-more-link" onclick="toggleMoreInfo(this)">Learn More</a>
+                <div class="more-info">
+                    <p>"From concept to execution, Nimlord's expertise was evident. The design has helped elevate our brand and attract more clients."</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <h3>Alexander Sophisticated</h3>
+                <p>"Nimlord was attentive to our needs and delivered an outstanding design that really stood out."</p>
+                <a href="javascript:void(0)" class="learn-more-link" onclick="toggleMoreInfo(this)">Learn More</a>
+                <div class="more-info">
+                    <p>"His creative process was thorough, and the result was a design that perfectly captured the essence of our company. Highly satisfied!"</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <h3>Jane Doe</h3>
+                <p>"I’m beyond pleased with the work Nimlord did for my business. His creativity and expertise were invaluable."</p>
+                <a href="javascript:void(0)" class="learn-more-link" onclick="toggleMoreInfo(this)">Learn More</a>
+                <div class="more-info">
+                    <p>"His understanding of the latest design trends and his ability to apply them to my brand’s vision made all the difference. I highly recommend him!"</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <h3>Fridah Karimi</h3>
+                <p>"From start to finish, Nimlord was dedicated to ensuring that we were satisfied with every aspect."</p>
+                <a href="javascript:void(0)" class="learn-more-link" onclick="toggleMoreInfo(this)">Learn More</a>
+                <div class="more-info">
+                    <p>"Nimlord was always available to discuss ideas and feedback. His collaborative approach made the whole process enjoyable and seamless."</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <h3>Millicent Mwendwa</h3>
+                <p>"Nimlord is not only skilled but also incredibly patient and willing to go the extra mile."</p>
+                <a href="javascript:void(0)" class="learn-more-link" onclick="toggleMoreInfo(this)">Learn More</a>
+                <div class="more-info">
+                    <p>"He worked with me every step of the way, and the final product was more than I could have asked for. I am beyond satisfied."</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <h3>John Doe</h3>
+                <p>"An exceptional designer! Nimlord’s work speaks for itself. I couldn't have asked for more."</p>
+                <a href="javascript:void(0)" class="learn-more-link" onclick="toggleMoreInfo(this)">Learn More</a>
+                <div class="more-info">
+                    <p>"His designs are creative, efficient, and impactful. I have received numerous compliments on the website he designed for me!"</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NimlordMwiti Company</p>
+    </footer>
+
+    <script>
+        function toggleMoreInfo(link) {
+            const moreInfo = link.nextElementSibling;
+            if (moreInfo.style.display === "none" || moreInfo.style.display === "") {
+                moreInfo.style.display = "block";
+                link.textContent = "Show Less";
+            } else {
+                moreInfo.style.display = "none";
+                link.textContent = "Learn More";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Nimlord Mwiti</title>
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-image: url('picture10.jpg'); /* Path to your nature image */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    padding: 20px;
+    position: relative;
+}
+
+/* Overlay Styling */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: -1; /* Keep the overlay behind the content */
+}
+
+        /* Header Styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em; /* Fixed padding */
+    text-align: center;
+    position: relative;
+}
+
+/* Animation for Left to Right Movement of the Text */
+header h1 {
+    font-size: 2em;
+    position: relative;
+    display: inline-block;
+    animation: moveText 4s ease-in-out infinite, blinkColor 1s step-start infinite;
+}
+
+/* Animation for Left to Right Transformation of the Text */
+@keyframes moveText {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+    }
+    25% {
+        transform: translateX(0); /* Move to the original position */
+    }
+    50% {
+        transform: translateX(100%); /* Move off-screen to the right */
+    }
+    75% {
+        transform: translateX(0); /* Move back to the original position */
+    }
+    100% {
+        transform: translateX(-100%); /* Start off-screen to the left again */
+    }
+}
+
+/* Blinking Header Colors Animation */
+@keyframes blinkColor {
+    0% {
+        color: #fff;
+    }
+    50% {
+        color: #ff6347; /* Tomato */
+    }
+    100% {
+        color: #fff;
+    }
+}
+
+        /* Navigation Menu Styling */
+        nav {
+    margin: 1em 0;
+    text-align: center;
+}
+
+/* Navigation Link Styling */
+nav a {
+    text-decoration: none;
+    color: #fff; /* Make the text color white for better visibility */
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for visibility */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+nav a:hover {
+    background-color: #1629da; /* Change to a strong color on hover */
+    color: #fff; /* Ensure text color remains white on hover */
+}
+
+        /* Main Content Styling */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-image: url('picture25.jpg'); /* Path to your nature image */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #100ce7;
+            margin-bottom: 1em;
+            text-align: center;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer Styling */
+        footer {
+            margin-top: 2em;
+            padding:2em;
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        footer p {
+            position:absolute;
+            white-space: nowrap;
+            animation: scroll-text 15s linear infinite;
+        }
+
+@keyframes scroll-text {
+            0% {
+                left: 100%;
+            }
+            100% {
+                left: -100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gallery</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="testimonial.html">Testimonial</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <main class="container">
+        <h2>My Work</h2>
+        
+        <div class="gallery-grid">
+            <!-- Placeholder images - replace src with your actual image paths -->
+            <div class="gallery-item">
+                <img src="picture1.jpg" alt="Gallery Image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="picture2.jpg" alt="Gallery Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="picture3.jpg" alt="Gallery Image 3">
+            </div>
+            <div class="gallery-item">
+                <img src="picture4.jpg" alt="Gallery Image 4">
+            </div>
+            <div class="gallery-item">
+                <img src="picture5.jpg" alt="Gallery Image 5">
+            </div>
+            <div class="gallery-item">
+                <img src="picture6.jpg" alt="Gallery Image 6">
+            </div>
+            <div class="gallery-item">
+                <img src="picture7.jpg" alt="Gallery Image 7">
+            </div>
+            <div class="gallery-item">
+                <img src="picture8.jpg" alt="Gallery Image 8">
+            </div>
+            <div class="gallery-item">
+                <img src="picture9.jpg" alt="Gallery Image 9">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NimlordMwiti Company</p>
+    </footer>
+</body>
+</html>
